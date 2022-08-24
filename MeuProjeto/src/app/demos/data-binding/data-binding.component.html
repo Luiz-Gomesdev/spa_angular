@@ -1,0 +1,39 @@
+<div class="binding">
+    <h3>Interpolation</h3>
+
+    <p>O número de cliques é: {{ contadorClique }}</p>
+
+
+    <br>
+    <br>
+
+    <h3>Property Binding</h3>
+
+    <button class="btn btn-info" [disabled]="contadorClique >= 10 "> Info </button>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h3>Event Binding</h3>
+
+    <button class="btn btn-primary" (click)="adicionarClique()">Adicionar</button>&nbsp;
+
+    <button class="btn btn-danger" (click)="removerClique()" [disabled]='contadorClique <= 0'> Remover</button>&nbsp;
+
+    <button class="btn btn-warning" (click)="zerarContadorClique()" [disabled]='contadorClique <= 0'> Zerar</button>&nbsp;
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h3>Two-way Binding</h3>
+
+    <input type="text" [(ngModel)]="nome" placeholder="Digite seu nome">
+    <br>
+    <br>
+    <label>Seu nome é: {{nome}}</label>
+
+</div>
